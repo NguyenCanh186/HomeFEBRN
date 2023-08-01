@@ -9,7 +9,6 @@ let info = {
     }
   },
   contact: require("./src/assets/Contact us-pana.png"),
-  logo: require("./src/assets/logo/vmg.png"),
   smsMkt: [
     { name: 'SMS', img: require("./src/assets/smsMkt/App data-cuate.png") },
     { name: 'Viber', img: require("./src/assets/smsMkt/Opinion-cuate.png") },
