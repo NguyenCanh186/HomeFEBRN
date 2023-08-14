@@ -33,19 +33,23 @@ import info from "../../../../info";
 
 export default {
   name: "News",
-  components: {CustomerNews},
-  data() {
-    return {
-      desgin_info: info.portfolio,
-    };
+  components: { CustomerNews },
+  beforeRouteEnter(to, from, next) {
+    next(vm => {
+      vm.reloadData();
+    });
   },
   methods: {
+    reloadData() {
+      this.desgin_info = info.portfolio;
+    },
     showModalDetail(portfolioId) {
       this.$router.push('/newsDetail/' + portfolioId);
     },
   }
 }
 </script>
+
 
 <style scoped>
 .card:hover {
