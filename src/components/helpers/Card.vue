@@ -12,7 +12,7 @@
         <h5 class="title2 mt-2 ml-3">{{ truncatedTitle }}</h5>
         <img
           class="card-img-top"
-          :src="portfolio.pictures[0].img"
+          :src="`http://localhost:8080/image/${portfolio.cover}`"
           alt="Card image cap"
         />
       </div>
@@ -21,9 +21,9 @@
           <p
             class=""
             v-html="
-              portfolio.description.length > 100
-                ? portfolio.description.substring(0, 105) + '...'
-                : portfolio.description
+              portfolio.content.length > 100
+                ? portfolio.content.substring(0, 105) + '...'
+                : portfolio.content
             "
           >
           </p>
@@ -49,10 +49,10 @@ export default {
   computed: {
     // Tạo computed property để hiển thị title đã được cắt nếu cần
     truncatedTitle() {
-      if (this.portfolio.name.length > 35) {
-        return this.portfolio.name.substring(0, 35) + '...';
+      if (this.portfolio.title.length > 35) {
+        return this.portfolio.title.substring(0, 35) + '...';
       } else {
-        return this.portfolio.name;
+        return this.portfolio.title;
       }
     },
   },

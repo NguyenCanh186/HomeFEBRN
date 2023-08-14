@@ -86,6 +86,7 @@ import info from "../../../../info";
 import "vue-nav-tabs/themes/vue-tabs.css";
 
 import "vueperslides/dist/vueperslides.css";
+import axios from "axios";
 
 export default {
   name: "PromotionsNews",
@@ -102,7 +103,7 @@ export default {
   data() {
     return {
       all_info: info.portfolio,
-      desgin_info: info.portfolio_design,
+      desgin_info: [],
       portfolio_info: [],
       showModal: false,
       showDesignModal: false,
@@ -118,9 +119,17 @@ export default {
     };
   },
   created() {
-    for (var i = 0; i < this.number; i++) {
-      this.portfolio_info.push(this.all_info[i]);
-    }
+    axios.get(`http://localhost:8080/get-data/news`)
+        .then(response => {
+          this.all_info = response.data; // Gán dữ liệu từ phản hồi vào all_info
+        })
+        .catch(error => {
+          console.error('Error fetching data:', error);
+        })
+        .finally(() => {
+          this.isLoading = false; // Kết thúc quá trình tải
+          this.loadInitialData(); // Gọi hàm để tải dữ liệu ban đầu
+        });
   },
   watch: {
     number() {
@@ -131,9 +140,14 @@ export default {
     },
   },
   methods: {
+    loadInitialData() {
+      for (var i = 0; i < this.number; i++) {
+        this.portfolio_info.push(this.all_info[i]);
+      }
+      console.log(this.portfolio_info)
+    },
     showModalDetail(portfolioId) {
       // Navigate to the desired route passing the portfolioId
-      console.log(123)
       this.$router.push('/newsDetail/' + portfolioId);
     },
     next() {

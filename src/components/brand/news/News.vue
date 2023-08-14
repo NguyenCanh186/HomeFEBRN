@@ -1,7 +1,6 @@
 <template>
   <div class="row">
     <div class="col-8">
-      <PromotionsNews />
       <CustomerNews />
     </div>
     <div class="col-4">
@@ -30,12 +29,11 @@
 
 <script>
 import CustomerNews from "@/components/brand/news/CustomerNews.vue";
-import PromotionsNews from "@/components/brand/news/PromotionsNews.vue";
 import info from "../../../../info";
 
 export default {
   name: "News",
-  components: {CustomerNews, PromotionsNews},
+  components: {CustomerNews},
   data() {
     return {
       desgin_info: info.portfolio,
