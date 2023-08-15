@@ -21,15 +21,15 @@
           <p
             class=""
             v-html="
-              portfolio.content.length > 100
-                ? portfolio.content.substring(0, 105) + '...'
-                : portfolio.content
+              portfolio.description.length > 80
+                ? portfolio.description.substring(0, 80) + '...'
+                : portfolio.description
             "
           >
           </p>
         </div>
-        <hr style="width: 90%">
-        <p>Ngày đăng: {{portfolio.date}}</p>
+        <hr style="width: 90%; margin-top: -10px">
+        <p>Ngày đăng: {{ formatDate(portfolio.date)}}</p>
       </div>
     </div>
   </div>
@@ -57,6 +57,10 @@ export default {
     },
   },
   methods: {
+    formatDate(dateString) {
+      const options = { year: 'numeric', month: 'long', day: 'numeric' };
+      return new Date(dateString).toLocaleDateString('vi-VN', options);
+    },
     open(url) {
       window.open(url, "_blank");
     },
@@ -94,7 +98,7 @@ img {
   border: none;
   box-shadow: 1px 1px 12px rgb(233, 233, 233);
   transition: all 0.5s;
-  height: 370px;
+  height: 340px;
   width: 360px;
 }
 

@@ -8,25 +8,25 @@
     }"
   >
     <div class="container">
-      <div
-          class="text-center"
-          data-aos="fade"
-          data-aos-once="true"
-          data-aos-duration="1000"
-      >
-        <span
-            class="title text-center"
-            :class="{ pgray: !nightMode, 'text-light': nightMode }"
-        >
-          Tin khách hàng
-        </span>
-      </div>
-      <hr
-          width="50%"
-          :class="{ pgray: !nightMode, 'bg-secondary': nightMode }"
-      />
+<!--      <div-->
+<!--          class="text-center"-->
+<!--          data-aos="fade"-->
+<!--          data-aos-once="true"-->
+<!--          data-aos-duration="1000"-->
+<!--      >-->
+<!--        <span-->
+<!--            class="title text-center"-->
+<!--            :class="{ pgray: !nightMode, 'text-light': nightMode }"-->
+<!--        >-->
+<!--          Tin khách hàng-->
+<!--        </span>-->
+<!--      </div>-->
+<!--      <hr-->
+<!--          width="50%"-->
+<!--          :class="{ pgray: !nightMode, 'bg-secondary': nightMode }"-->
+<!--      />-->
 
-      <br />
+<!--      <br />-->
       <div class="row">
         <div
             class="col-xl-4 col-bg-4 col-md-6 col-sm-12"
@@ -53,7 +53,7 @@
       </div>
       <div class="text-center py-3">
         <button class="btn mr-2" v-if="number < all_info.length" @click.prevent="showMore">Xem tiếp</button>
-        <button class="btn" v-if="number > 3" @click.prevent="showLess">Thu gọn</button>
+        <button class="btn" v-if="number > 6" @click.prevent="showLess">Thu gọn</button>
       </div>
     </div>
     <transition name="modal">
@@ -109,7 +109,7 @@ export default {
       showDesignModal: false,
       modal_info: {},
       design_modal_info: {},
-      number: 3,
+      number: 6,
       shower: 0,
       data: [
         '<div class="example-slide">Slide 1</div>',
@@ -171,7 +171,7 @@ export default {
       this.showDesignModal = true;
     },
     showLess() {
-      this.number = 3;
+      this.number = 6;
       this.showBtn = "Thu gọn";
     },
     showMore() {
