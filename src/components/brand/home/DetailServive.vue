@@ -1,7 +1,7 @@
 <template>
   <div
-    class="py-4 p-st"
-    :class="{
+      class="py-4 p-st"
+      :class="{
       'bg-light': !nightMode,
       'bg-dark2': nightMode,
       'text-light': nightMode,
@@ -22,11 +22,28 @@
     </span>
         <p class="text-center mt-2">SMS Brandname (Tin nhắn thương hiệu) là dịch vụ gửi tin nhắn hàng loạt, cho phép các doanh nghiệp gửi tin nhắn chăm sóc khách hàng và quảng bá đến hàng trăm ngàn người trong khoảng thời gian ngắn và hiển thị tên thương hiệu của doanh nghiệp ở mục người gửi.</p>
       </div>
-      <br>
-      <div class="row">
-        <div class="col-md-12 col-12">
-          <h2 class="title text-center mt-5">Các dịch vụ SMS Brandname của VMG</h2>
-        </div>
+    </div>
+
+    <div class="row mt-3">
+      <div class="col-md-12 col-12">
+        <h2 class="title text-center mt-5">Thành tựu dịch vụ SMS Brandname của VMG qua các năm</h2>
+      </div>
+    </div>
+    <br><br>
+    <div class="image-container mt-4">
+      <div
+          v-for="image in listAcv"
+          :key="image.name"
+          class="image-item"
+      >
+        <img :src="image.img" />
+        <span class="image-name">{{ image.name }}</span>
+      </div>
+    </div>
+    <br><br>
+    <div class="row">
+      <div class="col-md-12 col-12">
+        <h2 class="title text-center mt-5">Các dịch vụ SMS Brandname của VMG</h2>
       </div>
     </div>
     <br><br>
@@ -40,8 +57,7 @@
         <span class="image-name">{{ image.name }}</span>
       </div>
     </div>
-    <br><br>
-    <div class="row">
+    <div class="row mt -5">
       <div class="col-md-12 col-12">
         <h2 class="title text-center mt-5">Lý do lựa chọn sử dụng dịch vụ</h2>
       </div>
@@ -77,8 +93,7 @@ export default {
   data() {
     return {
       listImg: info.smsMkt,
-      httm: info.httm,
-      httm2: info.httm2,
+      listAcv: info.achievement,
     };
   },
 };
@@ -114,7 +129,6 @@ export default {
   font-style: normal;
   font-weight: 700;
   line-height: 32px;
-  padding: 5px 10px; /* Tuỳ chỉnh padding */
   border-radius: 5px; /* Tuỳ chỉnh góc bo tròn */
 }
 
