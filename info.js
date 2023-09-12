@@ -1,8 +1,6 @@
-import axios from "axios";
-let serverURL = `http://localhost:8080`
 let info = {
-  name: "Canh Nguyen",
-  logo_name: "Call Me",
+  name: "BRN",
+  logo_name: "BRN",
   flat_picture: require("./src/assets/slide.png"),
   config: {
     use_cookies: true,
@@ -18,6 +16,12 @@ let info = {
     { name: 'Voice', img: require("./src/assets/smsMkt/Receipt-cuate.png") },
     { name: 'My Viettel', img: require("./src/assets/smsMkt/Medical research-cuate.png") },
   ],
+  achievement: [
+    { name: 'Thành tựu', img: require("./src/assets/achievement/1.png") },
+    { name: 'Thành tựu', img: require("./src/assets/achievement/4.png") },
+    { name: 'Thành tựu', img: require("./src/assets/achievement/3.png") },
+    { name: 'Thành tựu', img: require("./src/assets/achievement/2.png") },
+  ],
   customer: [
     {name: 'logo', img: require("./src/assets/Customer/logo.png") },
     {name: 'logo', img: require("./src/assets/Customer/logo.png") },
@@ -30,13 +34,10 @@ let info = {
     {name: 'logo', img: require("./src/assets/Customer/logo.png") },
     {name: 'logo', img: require("./src/assets/Customer/logo.png") },
   ],
-  portfolio: [],
+  portfolio: [
+  ],
+  portfolio_design: [
+  ],
 };
-axios.get(`${serverURL}/get-data/news`)
-    .then(response => {
-      info.portfolio = response.data; // Gán dữ liệu từ phản hồi vào info.portfolio
-    })
-    .catch(error => {
-      console.error('Error fetching data:', error);
-    });
+
 export default info;
