@@ -9,6 +9,7 @@ let info = {
   partner: require("./src/assets/Partner.png"),
   frame151: require("./src/assets/Frame 151.png"),
   frame152: require("./src/assets/Frame 152.png"),
+  frame153: require("./src/assets/Rectangle 90.png"),
   logo_name: "BRN",
   flat_picture: require("./src/assets/slide.png"),
   config: {
