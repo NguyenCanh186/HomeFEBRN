@@ -1,11 +1,6 @@
 <template>
   <div class="logo-div">
-    <span
-      class="logo-title-name"
-      :class="{ pgray: !nightMode, 'text-light': nightMode }"
-      >Brandname</span
-    >
-<!--    <img style="width: 50% ; height: 50%" :src="name" alt="">-->
+    <img style="width: 35% ; height: 40%" :src="name" alt="">
   </div>
 </template>
 
@@ -21,7 +16,7 @@ export default {
   },
   data() {
     return {
-      name: info.logo,
+      name: info.name,
       dot: ".",
     };
   },

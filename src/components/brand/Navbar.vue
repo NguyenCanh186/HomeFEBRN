@@ -5,7 +5,7 @@
       style="background-color: white"
     >
       <div class="container">
-        <a
+        <a style="margin-left: -120px"
           class="navbar-brand"
           href="/public"
           @click.prevent="goToHome"
@@ -26,39 +26,19 @@
             </span>
         </button>
 
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <div class="collapse navbar-collapse" id="navbarSupportedContent" style="margin-right: -350px">
           <ul class="navbar-nav ml-auto">
-            <li class="nav-item mx-2">
-              <a
-                class="nav-link"
-                href="/portfolio"
-                @click.prevent="goToHome"
-                >Trang chủ</a
-              >
+            <li class="nav-item mx-5">
+              <a class="nav-link nav-content" href="/portfolio" @click.prevent="goToHome">Trang chủ</a>
             </li>
-            <li class="nav-item mx-2 ">
-              <a
-                class="nav-link"
-                href="/news"
-                @click.prevent="goToNewsPage"
-                >Tin tức</a
-              >
+            <li class="nav-item mx-5">
+              <a class="nav-link nav-content" href="/news" @click.prevent="goToNewsPage">Tin tức</a>
             </li>
-            <li class="nav-item mx-2">
-              <a
-                class="nav-link"
-                href="/api"
-                @click.prevent="goToApi"
-                >API</a
-              >
+            <li class="nav-item mx-5">
+              <a class="nav-link nav-content" href="/api" @click.prevent="goToApi">API</a>
             </li>
-            <li class="nav-item mx-2">
-              <a
-                  class="nav-link"
-                  href=""
-                  @click.prevent="goContact"
-              >Liên hệ</a
-              >
+            <li class="nav-item mx-5">
+              <a class="nav-link nav-content" href="" @click.prevent="goContact">Liên hệ</a>
             </li>
           </ul>
         </div>
@@ -150,6 +130,15 @@ export default {
 }
 .nav-link:hover{
   color: white;
+}
+.nav-content {
+  text-align: center;
+  /* Body/L medium */
+  font-family: Inter,serif;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 28px; /* 140% */
 }
 button {
   border: none;

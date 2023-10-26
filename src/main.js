@@ -6,7 +6,6 @@ import VueParallaxJs from 'vue-parallax-js'
 import VueScrollTo from 'vue-scrollto'
 import VueRouter from 'vue-router'
 import VTooltip from 'v-tooltip'
-
 var VueCookie = require('vue-cookie');
 
 Vue.use(VTooltip)
