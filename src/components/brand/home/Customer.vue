@@ -3,26 +3,31 @@
     class="py-4 p-st"
   >
     <div class="container">
-      <div
-        class="text-center"
-        data-aos="fade"
-        data-aos-once="true"
-        data-aos-duration="1000"
-      >
-        <span
-          class="title text-center"
-          >Đối tác sử dụng dịch vụ </span
-        >
-      </div>
-      <br />
-      <div class="image-container">
-        <div
-            v-for="image in listImg"
-            :key="image.name"
-            class="image-item"
-        >
-          <img :src="image.img" :alt="image.name" />
-          <p class="image-name">{{ image.name }}</p>
+      <div class="col-md-12 col-12 text-center">
+        <img :src="partner" alt="">
+        <div style="margin-top: -100px">
+          <p style="color: #0A397F;
+
+/* Body/L */
+font-family: Inter;
+font-size: 18px;
+font-style: normal;
+font-weight: 400;
+line-height: 28px; /* 155.556% */">Partner</p>
+          <p style="color: #474443;
+text-align: center;
+
+/* Title/H2 */
+font-family: Inter;
+font-size: 40px;
+font-style: normal;
+font-weight: 700;
+line-height: 52px; /* 130% */">Đối tác sử dụng dịch vụ </p>
+        </div>
+        <br><br>
+        <div>
+          <img :src="frame151" alt=""><br><br><br>
+          <img :src="frame152" alt="">
         </div>
       </div>
       <p
@@ -98,6 +103,9 @@ export default {
   },
   data() {
     return {
+      partner: info.partner,
+      frame151: info.frame151,
+      frame152: info.frame152,
       listImg: info.customer,
       email: "",
       name: "",

@@ -6,6 +6,9 @@ let info = {
   name: require("./src/assets/logo.png"),
   frame: require("./src/assets/Frame 144.png"),
   rectangle: require("./src/assets/Rectangle 11.png"),
+  partner: require("./src/assets/Partner.png"),
+  frame151: require("./src/assets/Frame 151.png"),
+  frame152: require("./src/assets/Frame 152.png"),
   logo_name: "BRN",
   flat_picture: require("./src/assets/slide.png"),
   config: {
