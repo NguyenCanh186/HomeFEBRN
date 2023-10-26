@@ -29,26 +29,35 @@ line-height: 52px; /* 130% */">Đối tác sử dụng dịch vụ </p>
           <img :src="frame151" alt=""><br><br><br>
           <img :src="frame152" alt="">
         </div>
+        <div style="margin-bottom: -160px">
+          <div class="mt-5" style="margin-bottom: -140px">
+            <img :src="frame153" alt="">
+          </div>
+          <div class="row" style="padding: 50px 0 50px 0">
+            <div class="col-6 text-right">
+              <p style="
+            color: white;
+font-family: Inter,serif;
+font-size: 34.297px;
+font-style: normal;
+font-weight: 700;
+line-height: 45.729px; /* 133.333% */">Bạn có câu hỏi nào không?</p>
+            </div>
+            <div class="col-6">
+              <img :src="group4" alt="">
+            </div>
+          </div>
+        </div>
       </div>
-      <Snackbar
-        :showSnackbar="showSnackbar"
-        @close="closeSnackbar"
-        :snackbarMessage="snackbarMessage"
-        :snackbarColor="snackbarColor"
-      />
     </div>
   </div>
 </template>
 
 <script>
-import Snackbar from "../../helpers/Snackbar.vue";
 import info from "../../../../info";
 
 export default {
   name: "Contact",
-  components: {
-    Snackbar,
-  },
   props: {
     nightMode: {
       type: Boolean,
@@ -59,7 +68,9 @@ export default {
       partner: info.partner,
       frame151: info.frame151,
       frame152: info.frame152,
+      frame153: info.frame153,
       listImg: info.customer,
+      group4: info.group4,
       email: "",
       name: "",
       text: "",

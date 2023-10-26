@@ -3,6 +3,8 @@ let info = {
   SMSBRANDNAME: require("./src/assets/SMS BRANDNAME.png"),
   WHATWEDO: require("./src/assets/WHAT WE DO.png"),
   service: require("./src/assets/service.png"),
+  group4: require("./src/assets/Group 4.png"),
+  group724: require("./src/assets/Group 724.png"),
   name: require("./src/assets/logo.png"),
   frame: require("./src/assets/Frame 144.png"),
   rectangle: require("./src/assets/Rectangle 11.png"),
@@ -10,6 +12,8 @@ let info = {
   frame151: require("./src/assets/Frame 151.png"),
   frame152: require("./src/assets/Frame 152.png"),
   frame153: require("./src/assets/Rectangle 90.png"),
+  frame4023: require("./src/assets/Frame 4023.png"),
+  logobrand: require("./src/assets/logo_brand 1.png"),
   logo_name: "BRN",
   flat_picture: require("./src/assets/slide.png"),
   config: {

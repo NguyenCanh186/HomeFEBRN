@@ -26,7 +26,7 @@
             </span>
         </button>
 
-        <div class="collapse navbar-collapse" id="navbarSupportedContent" style="margin-right: -350px">
+        <div class="collapse navbar-collapse" id="navbarSupportedContent" style="margin-right: -300px">
           <ul class="navbar-nav ml-auto">
             <li class="nav-item mx-5">
               <a class="nav-link nav-content" href="/portfolio" @click.prevent="goToHome">Trang chủ</a>

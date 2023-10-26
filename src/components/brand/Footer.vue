@@ -1,12 +1,9 @@
 <template>
-  <div class="mt-5" style="background-color: #3380CB; color: white">
+  <div class="mt-5" style="background-color: #0F3567; color: white">
     <div class="container py-3">
       <div class="row">
-        <img style="margin-top: -200px" :src="imgQuestion" alt="">
-      </div>
-      <br>
-      <div class="row">
         <div class="col-md-6 col-12">
+
           <h4 style="color: white"><strong>SMS BRANDNAME</strong></h4>
           <p><strong>CÔNG TY CỔ PHẦN TRUYỀN THÔNG VMG</strong></p>
           <ul>
@@ -129,31 +126,11 @@ export default {
   name: "Footer",
   data() {
     return {
-      logo: info.httm2,
+      logobrand: info.logobrand,
       imgQuestion: info.frame153,
-      linkedin: info.links.linkedin,
-      github: info.links.github,
-      behance: info.links.behance,
-      resume: info.links.resume,
     };
   },
   methods: {
-    open(link) {
-      switch (link) {
-        case "linkedin":
-          window.open(this.linkedin, "_blank");
-          break;
-        case "github":
-          window.open(this.github, "_blank");
-          break;
-        case "behance":
-          window.open(this.behance, "_blank");
-          break;
-        case "resume":
-          window.open(this.resume, "_blank");
-          break;
-      }
-    },
     goToNewsPage() {
       this.$router.push('/news').catch(() => {});
     },

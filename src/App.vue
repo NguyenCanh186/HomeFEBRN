@@ -16,7 +16,7 @@
 <script>
 import Navbar from "./components/brand/Navbar.vue";
 import Home from "./components/brand/home/Slide.vue";
-import Footer from "./components/brand/Footer.vue";
+import Footer from "./components/brand/Footer2.vue";
 import Chat from "./components/brand/home/Chat.vue";
 import News from "./components/brand/news/News.vue";
 import info from "../info";
