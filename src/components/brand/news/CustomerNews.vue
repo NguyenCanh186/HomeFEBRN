@@ -1,32 +1,5 @@
 <template>
-  <div
-      class="py-4 p-st"
-      :class="{
-      'bg-light': !nightMode,
-      'bg-dark2': nightMode,
-      'text-light': nightMode,
-    }"
-  >
     <div class="container">
-<!--      <div-->
-<!--          class="text-center"-->
-<!--          data-aos="fade"-->
-<!--          data-aos-once="true"-->
-<!--          data-aos-duration="1000"-->
-<!--      >-->
-<!--        <span-->
-<!--            class="title text-center"-->
-<!--            :class="{ pgray: !nightMode, 'text-light': nightMode }"-->
-<!--        >-->
-<!--          Tin khách hàng-->
-<!--        </span>-->
-<!--      </div>-->
-<!--      <hr-->
-<!--          width="50%"-->
-<!--          :class="{ pgray: !nightMode, 'bg-secondary': nightMode }"-->
-<!--      />-->
-
-<!--      <br />-->
       <div class="row">
         <div
             class="col-xl-4 col-bg-4 col-md-6 col-sm-12"
@@ -55,26 +28,25 @@
         <button class="btn mr-2" v-if="number < all_info.length" @click.prevent="showMore">Xem tiếp</button>
         <button class="btn" v-if="number > 6" @click.prevent="showLess">Thu gọn</button>
       </div>
+      <transition name="modal">
+        <Modal
+            :showModal="showModal"
+            @close="closeModal"
+            v-if="showModal"
+            :portfolio="modal_info"
+            :nightMode="nightMode"
+        />
+      </transition>
+      <transition name="modal">
+        <DesignModal
+            :showModal="showDesignModal"
+            @close="closeModal"
+            v-if="showDesignModal"
+            :portfolio="design_modal_info"
+            :nightMode="nightMode"
+        />
+      </transition>
     </div>
-    <transition name="modal">
-      <Modal
-          :showModal="showModal"
-          @close="closeModal"
-          v-if="showModal"
-          :portfolio="modal_info"
-          :nightMode="nightMode"
-      />
-    </transition>
-    <transition name="modal">
-      <DesignModal
-          :showModal="showDesignModal"
-          @close="closeModal"
-          v-if="showDesignModal"
-          :portfolio="design_modal_info"
-          :nightMode="nightMode"
-      />
-    </transition>
-  </div>
 </template>
 
 <script>

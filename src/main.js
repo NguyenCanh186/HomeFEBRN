@@ -6,6 +6,7 @@ import VueParallaxJs from 'vue-parallax-js'
 import VueScrollTo from 'vue-scrollto'
 import VueRouter from 'vue-router'
 import VTooltip from 'v-tooltip'
+import Contact from "@/components/brand/home/Contact.vue";
 var VueCookie = require('vue-cookie');
 
 Vue.use(VTooltip)
@@ -17,8 +18,12 @@ Vue.use(VueParallaxJs)
 Vue.config.productionTip = false
 
 const routes = [
-  { path: '/'}
-]
+  {
+    path: '/contact', // Đường dẫn bạn muốn chuyển đến
+    name: 'Contact', // Tên của tuyến, có thể đặt tên theo ý muốn
+    component: Contact, // Thay thế bằng tên component bạn muốn hiển thị
+  },
+];
 
 const router = new VueRouter({
   mode:'history',

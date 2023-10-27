@@ -127,7 +127,7 @@ export default {
   data() {
     return {
       logobrand: info.logobrand,
-      imgQuestion: info.frame153,
+      imgQuestion: info.frame153
     };
   },
   methods: {

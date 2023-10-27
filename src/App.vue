@@ -115,6 +115,7 @@ export default {
   margin-top: 38px;
   padding-top: 40px;
   position: relative;
+  background: rgba(26, 114, 221, 0.1)
 }
 
 .text-light {

@@ -6,6 +6,11 @@ let info = {
   group4: require("./src/assets/Group 4.png"),
   group724: require("./src/assets/Group 724.png"),
   name: require("./src/assets/logo.png"),
+  ft: require("./src/assets/ft (1).png"),
+  ft5: require("./src/assets/ft (5).png"),
+  ft4: require("./src/assets/ft (4).png"),
+  ft3: require("./src/assets/ft (3).png"),
+  ft2: require("./src/assets/ft (2).png"),
   frame: require("./src/assets/Frame 144.png"),
   rectangle: require("./src/assets/Rectangle 11.png"),
   partner: require("./src/assets/Partner.png"),
@@ -22,7 +27,26 @@ let info = {
       blur: false
     }
   },
-  contact: require("./src/assets/Contact us-pana.png"),
+  contact: {
+    header: require("./src/assets/contact/header.png"),
+    email: require("./src/assets/contact/email.png"),
+    phone: require("./src/assets/contact/contact.png"),
+    adress: require("./src/assets/contact/adress.png"),
+    textHeader: require("./src/assets/contact/text_header.png"),
+  },
+  API: {
+    header: require("./src/assets/API/header.png"),
+    p1: require("./src/assets/API/p1.png"),
+    p2: require("./src/assets/API/p2.png"),
+    button: require("./src/assets/API/Button.png"),
+    textHeader: require("./src/assets/API/textHeader.png"),
+    api: require("./src/assets/API/API DOCUMENT.png"),
+    step: require("./src/assets/API/step.png"),
+  },
+  news: {
+    header: require("./src/assets/news/header.png"),
+    textHeader: require("./src/assets/news/textHeader.png"),
+  },
   smsMkt: [
     { name: 'SMS', img: require("./src/assets/smsMkt/App data-cuate.png") },
     { name: 'Viber', img: require("./src/assets/smsMkt/Opinion-cuate.png") },

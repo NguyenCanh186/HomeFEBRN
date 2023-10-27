@@ -8,4 +8,8 @@ export class GetDataService {
     static getNewsById(id) {
         return axios.get(`${this.serverURL}/get-data/news/${id}`)
     }
+
+    static sendMail() {
+        return axios.post(`${this.serverURL}/get-data/sendMail`)
+    }
 }
