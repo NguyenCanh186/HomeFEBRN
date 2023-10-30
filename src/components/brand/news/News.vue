@@ -1,19 +1,38 @@
 <template>
   <div>
-    <div class="text-center">
-      <div style="position: relative; display: inline-block; width: 100%">
-        <img :src="header" style="width: 100%;" alt="">
-        <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0,0,0,0.5);"></div>
-      </div>
-      <div
-          class="container custom-container"
-          data-aos="fade"
-          data-aos-once="true"
-          data-aos-duration="1000"
-          style="position: absolute;top: 15%;left: 50%;transform: translate(-50%, -50%);color: #ffffff;height: auto;">
-        <img style="z-index: 20" :src="textHeader" alt="">
+    <div class="isMobile">
+      <div class="text-center" style="margin-top: -15px">
+        <div style="position: relative; display: inline-block; width: 100%">
+          <img :src="headerMobile" style="width: 100%;" alt="">
+          <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0,0,0,0.5);"></div>
+        </div>
+        <div
+            class="container custom-container"
+            data-aos="fade"
+            data-aos-once="true"
+            data-aos-duration="1000"
+            style="position: absolute;top: 6%;left: 50%;transform: translate(-50%, -50%);color: #ffffff;height: auto;">
+          <img style="z-index: 20; width: 100%" :src="textHeader" alt="">
+        </div>
       </div>
     </div>
+    <div class="isComputer">
+      <div class="text-center">
+        <div style="position: relative; display: inline-block; width: 100%">
+          <img :src="header" style="width: 100%;" alt="">
+          <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0,0,0,0.5);"></div>
+        </div>
+        <div
+            class="container custom-container"
+            data-aos="fade"
+            data-aos-once="true"
+            data-aos-duration="1000"
+            style="position: absolute;top: 15%;left: 50%;transform: translate(-50%, -50%);color: #ffffff;height: auto;">
+          <img style="z-index: 20" :src="textHeader" alt="">
+        </div>
+      </div>
+    </div>
+
 <!--    <div class="image-container mt-4" style="max-height: 100%; overflow-x: auto;">-->
 <!--      <div-->
 <!--          v-for="item in desgin_info"-->
@@ -38,9 +57,9 @@
 <!--          </div>-->
 <!--        </div>-->
 <!--      </div>-->
-    <div>
+<!--    <div>-->
       <CustomerNews />
-    </div>
+<!--    </div>-->
   </div>
 </template>
 
@@ -56,6 +75,7 @@ export default {
   data() {
     return {
       header: info.news.header,
+      headerMobile: info.news.headerMobile,
       textHeader: info.news.textHeader,
       all_info: info.portfolio,
       desgin_info: [],
@@ -161,6 +181,22 @@ export default {
 .image-container img {
   height: 100%; /* Set the height of the image to 100% to fill the container */
   object-fit: cover; /* Maintain the aspect ratio and cover the container */
+}
+
+.isMobile {
+  display: none;
+}
+
+.isComputer {
+  display: block;
+}
+@media only screen and (max-width: 768px) {
+  .isMobile {
+    display: block;
+  }
+  .isComputer {
+    display: none;
+  }
 }
 </style>
 

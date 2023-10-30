@@ -13,14 +13,21 @@ let info = {
   ft2: require("./src/assets/ft (2).png"),
   frame: require("./src/assets/Frame 144.png"),
   rectangle: require("./src/assets/Rectangle 11.png"),
+  rectangleMobile: require("./src/assets/img.png"),
+  rectangleMobile1: require("./src/assets/RectangleMobile1.png"),
+  rectangleMobile2: require("./src/assets/RectangleMobile2.png"),
   partner: require("./src/assets/Partner.png"),
   frame151: require("./src/assets/Frame 151.png"),
   frame152: require("./src/assets/Frame 152.png"),
   frame153: require("./src/assets/Rectangle 90.png"),
+  rectangleMobile90: require("./src/assets/RectangleMobile 90.png"),
+  frame154: require("./src/assets/Frame 154.png"),
   frame4023: require("./src/assets/Frame 4023.png"),
+  frameMobile144: require("./src/assets/frameMobile144.png"),
   logobrand: require("./src/assets/logo_brand 1.png"),
   logo_name: "BRN",
   flat_picture: require("./src/assets/slide.png"),
+  slideMobile: require("./src/assets/slideMobile.png"),
   config: {
     use_cookies: true,
     navbar: {
@@ -29,6 +36,7 @@ let info = {
   },
   contact: {
     header: require("./src/assets/contact/header.png"),
+    headerMobile: require("./src/assets/contact/Liên hệ.png"),
     email: require("./src/assets/contact/email.png"),
     phone: require("./src/assets/contact/contact.png"),
     adress: require("./src/assets/contact/adress.png"),
@@ -36,6 +44,7 @@ let info = {
   },
   API: {
     header: require("./src/assets/API/header.png"),
+    headerMobile: require("./src/assets/API/Tin tức 1.png"),
     p1: require("./src/assets/API/p1.png"),
     p2: require("./src/assets/API/p2.png"),
     button: require("./src/assets/API/Button.png"),
@@ -44,6 +53,7 @@ let info = {
     step: require("./src/assets/API/step.png"),
   },
   news: {
+    headerMobile: require("./src/assets/news/Tin tức 1.png"),
     header: require("./src/assets/news/header.png"),
     textHeader: require("./src/assets/news/textHeader.png"),
   },

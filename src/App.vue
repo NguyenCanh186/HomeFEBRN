@@ -1,5 +1,5 @@
 <template>
-  <div id="app" :class="{ 'text-dark': !nightMode, 'text-light': nightMode }">
+  <div id="app">
     <Navbar @scroll="scrollTo" @nightMode="switchMode" :nightMode="nightMode" />
     <div class="parent">
       <Home v-if="isHomeRoute" :nightMode="nightMode" />
@@ -8,7 +8,7 @@
       <NewsDetail v-if="isNewsDetailRoute" :nightMode="nightMode" />
       <API v-if="isAPIRoute" :nightMode="nightMode" />
       <Footer :nightMode="nightMode" />
-      <Chat :nightMode="nightMode" />
+<!--      <Chat :nightMode="nightMode" />-->
     </div>
   </div>
 </template>
@@ -105,11 +105,11 @@ export default {
   width: 100%;
 }
 
-@media screen and (max-width: 580px) {
-  #app {
-    width: fit-content;
-  }
-}
+/*@media screen and (max-width: 580px) {*/
+/*  #app {*/
+/*    width: fit-content;*/
+/*  }*/
+/*}*/
 
 .parent {
   margin-top: 38px;

@@ -9,7 +9,7 @@ export class GetDataService {
         return axios.get(`${this.serverURL}/get-data/news/${id}`)
     }
 
-    static sendMail() {
-        return axios.post(`${this.serverURL}/get-data/sendMail`)
+    static sendMail(contact) {
+        return axios.post(`${this.serverURL}/get-data/sendMail`, contact)
     }
 }

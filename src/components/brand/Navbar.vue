@@ -5,28 +5,33 @@
       style="background-color: white"
     >
       <div class="container">
-        <a style="margin-left: -120px"
-          class="navbar-brand"
-          href="/public"
-          @click.prevent="goToHome"
-        >
-          <Logo :nightMode="nightMode" />
-        </a>
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-toggle="collapse"
-          data-target="#navbarSupportedContent"
-          aria-controls="navbarSupportedContent"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span style="color: white; font-size: 23px;"
-            ><i class="fas fa-bars"></i>
+        <div class="row">
+          <div class="col-10">
+            <a
+                class="navbar-brand"
+                href="/public"
+                @click.prevent="goToHome"
+            >
+              <Logo :nightMode="nightMode" />
+            </a>
+          </div>
+          <div class="col-2">
+            <button
+                class="navbar-toggler mt-2"
+                type="button"
+                data-toggle="collapse"
+                data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent"
+                aria-expanded="false"
+                aria-label="Toggle navigation"
+            >
+          <span style="color: #1682ff; font-size: 23px;"
+          ><i class="fas fa-bars"></i>
             </span>
-        </button>
-
-        <div class="collapse navbar-collapse" id="navbarSupportedContent" style="margin-right: -300px">
+            </button>
+          </div>
+        </div>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav ml-auto">
             <li class="nav-item mx-5">
               <a class="nav-link nav-content" href="/portfolio" @click.prevent="goToHome">Trang chủ</a>
@@ -44,12 +49,6 @@
         </div>
       </div>
     </nav>
-    <Snackbar
-        :showSnackbar="showSnackbar"
-        @close="closeSnackbar"
-        :snackbarMessage="snackbarMessage"
-        :snackbarColor="snackbarColor"
-    />
   </div>
 </template>
 

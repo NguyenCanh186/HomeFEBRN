@@ -1,5 +1,13 @@
 <template>
     <div class="container">
+      <p style="color: #474443;
+      text-align: center;
+font-family: Inter;
+font-size: 32px;
+font-style: normal;
+margin-top: 20px;
+font-weight: 700;
+line-height: 42px; /* 131.25% */">Tin nổi bật</p>
       <div class="row">
         <div
             class="col-xl-4 col-bg-4 col-md-6 col-sm-12"

@@ -1,28 +1,24 @@
 <template>
   <div
-    class="py-4 p-st"
+    class="py-4 p-st" style="background-color: #f9f9f9"
   >
-    <div class="container">
+    <div class="container isMobile" >
+      <div class="col-md-12 col-12 text-center" style="position: relative">
+        <img :src="partner" alt="" style="width: 85%">
+        <div style="margin-top: -20px; max-width: 650px">
+          <p style="color: #004383; font-size: 15px">About SMS Brandname</p>
+          <p style="color: #474443;text-align: center;font-family: Inter;font-size: 32px;font-style: normal;font-weight: 700;line-height: 42px;">Đối tác sử dụng
+            dịch vụ</p>
+          <img :src="frame154" alt="">
+        </div>
+      </div>
+    </div>
+    <div class="container isComputer">
       <div class="col-md-12 col-12 text-center">
         <img :src="partner" alt="">
         <div style="margin-top: -100px">
-          <p style="color: #0A397F;
-
-/* Body/L */
-font-family: Inter;
-font-size: 18px;
-font-style: normal;
-font-weight: 400;
-line-height: 28px; /* 155.556% */">Partner</p>
-          <p style="color: #474443;
-text-align: center;
-
-/* Title/H2 */
-font-family: Inter;
-font-size: 40px;
-font-style: normal;
-font-weight: 700;
-line-height: 52px; /* 130% */">Đối tác sử dụng dịch vụ </p>
+          <p style="color: #0A397F;font-family: Inter;font-size: 18px;font-style: normal;font-weight: 400;line-height: 28px; /* 155.556% */">Partner</p>
+          <p style="color: #474443;text-align: center;font-family: Inter;font-size: 40px;font-style: normal;font-weight: 700;line-height: 52px; /* 130% */">Đối tác sử dụng dịch vụ </p>
         </div>
         <br><br>
         <div>
@@ -50,6 +46,7 @@ export default {
       frame151: info.frame151,
       frame152: info.frame152,
       frame153: info.frame153,
+      frame154: info.frame154,
       listImg: info.customer,
       group4: info.group4,
       email: "",
@@ -98,5 +95,20 @@ export default {
   font-style: normal;
   font-weight: 700;
   line-height: 52px;
+}
+.isMobile {
+  display: none;
+}
+
+.isComputer {
+  display: block;
+}
+@media only screen and (max-width: 768px) {
+  .isMobile {
+    display: block;
+  }
+  .isComputer {
+    display: none;
+  }
 }
 </style>

@@ -1,75 +1,126 @@
 <template>
-  <div class="mt-4" style="">
-    <div class="text-center">
-      <div style="position: relative; display: inline-block; width: 100%">
-        <img :src="header" style="width: 100%;" alt="">
-        <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0,0,0,0.5);"></div>
+  <div class="" style="">
+    <div class="isMobile">
+      <div class="text-center" style="margin-top: -15px">
+        <div style="position: relative; display: inline-block; width: 100%">
+          <img :src="headerMobile" style="width: 100%;" alt="">
+          <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0,0,0,0.5);"></div>
+        </div>
+        <div
+            class="container custom-container"
+            data-aos="fade"
+            data-aos-once="true"
+            data-aos-duration="1000"
+            style="position: absolute;top: 7%;left: 50%;transform: translate(-50%, -50%);color: #ffffff;height: auto;">
+          <img style="z-index: 20; width: 100%" :src="textHeader" alt="">
+        </div>
       </div>
-      <div
-          class="container custom-container"
-          data-aos="fade"
-          data-aos-once="true"
-          data-aos-duration="1000"
-          style="position: absolute;top: 15%;left: 50%;transform: translate(-50%, -50%);color: #ffffff;height: auto;">
-        <img style="z-index: 20" :src="textHeader" alt="">
+      <div class="container text-center mt-5">
+        <img :src="email" alt="">
+        <img :src="phone" alt="" class="mt-4">
+        <img :src="address" alt="" class="mt-4">
       </div>
+      <br><br>
+      <p style="color: var(--Primary, #3091D9);text-align: center;font-family: Inter;font-size: 32px;font-style: normal;font-weight: 1000;line-height: 42px; /* 131.25% */">Vui lòng để lại
+        <br>
+        thông tin, chúng tôi sẽ <br>
+        liên lạc với bạn.</p>
+      <div class="container text-center">
+        <p style="color: var(--Text-color, #474443);text-align: center;font-family: Inter;font-size: 16px;font-style: normal;font-weight: 500;line-height: 24px; /* 150% */">Chúng tôi rất trân trọng mọi sự quan tâm mà bạn đang dành cho dịch vụ tin nhắn thương hiệu SMS Brandname của VMG MEDIA. </p>
+        <br>
+        <form style="width: 100%" class="mb-5">
+              <input v-model="form.name" type="text" class="custom-form mt-4" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Tên ">
+              <input v-model="form.phoneNumber" type="number" class="custom-form mt-4" id="exampleInputPassword1" placeholder="Số điện thoại">
+              <input v-model="form.email" type="email" class="custom-form mt-4" id="exampleInputPassword1" placeholder="Email">
+              <input v-model="form.businessName" type="text" class="custom-form mt-4" id="exampleInputPassword1" placeholder="Lĩnh vực kinh doanh của bạn là gì?">
+          <div class="form-group mt-4">
+            <select v-model="form.customerType" class="custom-form">
+              <option style="color: rgba(105, 110, 119, 0.50);font-family: Inter;font-size: 12px;font-style: normal;font-weight: 400;line-height: 16px; /* 133.333% */" disabled value="">Bạn là khách hàng cá nhân hay doanh nghiệp?</option>
+              <option>Khách hàng cá nhân</option>
+              <option>Doanh nghiệp</option>
+            </select>
+          </div>
+          <div class="form-group mt-4">
+            <input v-model="form.address" type="text" class="custom-form" id="exampleInputPassword1" placeholder="Địa chỉ công ty">
+          </div>
+          <div class="d-flex justify-content-end mt-4">
+            <button type="submit"  style="display: flex;border-radius: 8.065px;background: #FF5151;color: #f9f9f9;width: 100%;padding: 13.825px 35.146px 13.825px 35.582px;flex-direction: column;justify-content: center;align-items: center;" @click="submitForm">GỬI THÔNG TIN</button>
+          </div>
+        </form>
+      </div>
+
     </div>
-    <div class="container mt-5">
-      <div class="row text-center">
-        <div class="col-4">
-          <img :src="email" alt="">
+    <div class="isComputer">
+      <div class="text-center">
+        <div style="position: relative; display: inline-block; width: 100%">
+          <img :src="header" style="width: 100%;" alt="">
+          <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0,0,0,0.5);"></div>
         </div>
-        <div class="col-4">
-          <img :src="phone" alt="">
-        </div>
-        <div class="col-4">
-          <img :src="address" alt="">
+        <div
+            class="container custom-container"
+            data-aos="fade"
+            data-aos-once="true"
+            data-aos-duration="1000"
+            style="position: absolute;top: 15%;left: 50%;transform: translate(-50%, -50%);color: #ffffff;height: auto;">
+          <img style="z-index: 20" :src="textHeader" alt="">
         </div>
       </div>
       <div class="container mt-5">
-        <div class="text-center">
-          <p style="color: var(--Primary, #3091D9);text-align: center;font-family: Inter,serif;font-size: 48px;font-style: normal;font-weight: 700;line-height: 64px">
-            Vui lòng để lại thông tin,<br>
-            chúng tôi sẽ liên lạc với bạn.
-          </p>
-          <p>
-            Chúng tôi rất trân trọng mọi sự quan tâm mà bạn đang dành cho dịch vụ tin <br> nhắn thương hiệu SMS Brandname của VMG MEDIA.
-          </p>
+        <div class="row text-center">
+          <div class="col-4">
+            <img :src="email" alt="">
+          </div>
+          <div class="col-4">
+            <img :src="phone" alt="">
+          </div>
+          <div class="col-4">
+            <img :src="address" alt="">
+          </div>
         </div>
-        <div class="row mt-5">
-          <br>
-          <form style="width: 100%">
-            <div class="row">
-              <div class=" col-6">
-                <input v-model="form.name" type="text" class="custom-form" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Tên ">
+        <div class="container mt-5">
+          <div class="text-center">
+            <p style="color: var(--Primary, #3091D9);text-align: center;font-family: Inter,serif;font-size: 48px;font-style: normal;font-weight: 700;line-height: 64px">
+              Vui lòng để lại thông tin,<br>
+              chúng tôi sẽ liên lạc với bạn.
+            </p>
+            <p>
+              Chúng tôi rất trân trọng mọi sự quan tâm mà bạn đang dành cho dịch vụ tin <br> nhắn thương hiệu SMS Brandname của VMG MEDIA.
+            </p>
+          </div>
+          <div class="row mt-5">
+            <br>
+            <form style="width: 100%">
+              <div class="row">
+                <div class=" col-6">
+                  <input v-model="form.name" type="text" class="custom-form" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Tên ">
+                </div>
+                <div class=" col-6">
+                  <input v-model="form.phoneNumber" type="number" class="custom-form" id="exampleInputPassword1" placeholder="Số điện thoại">
+                </div>
               </div>
-              <div class=" col-6">
-                <input v-model="form.phone" type="number" class="custom-form" id="exampleInputPassword1" placeholder="Số điện thoại">
+              <div class="row mt-5">
+                <div class="form-group  col-6">
+                  <input v-model="form.email" type="email" class="custom-form" id="exampleInputPassword1" placeholder="Email">
+                </div>
+                <div class="form-group  col-6">
+                  <input v-model="form.businessName" type="text" class="custom-form" id="exampleInputPassword1" placeholder="Lĩnh vực kinh doanh của bạn là gì?">
+                </div>
               </div>
-            </div>
-            <div class="row mt-5">
-              <div class="form-group  col-6">
-                <input v-model="form.email" type="email" class="custom-form" id="exampleInputPassword1" placeholder="Email">
+              <div class="form-group mt-4">
+                <select v-model="form.customerType" class="custom-form">
+                  <option disabled value="">Bạn là khách hàng cá nhân hay doanh nghiệp?</option>
+                  <option>Khách hàng cá nhân</option>
+                  <option>Doanh nghiệp</option>
+                </select>
               </div>
-              <div class="form-group  col-6">
-                <input v-model="form.business" type="text" class="custom-form" id="exampleInputPassword1" placeholder="Lĩnh vực kinh doanh của bạn là gì?">
+              <div class="form-group mt-5">
+                <input v-model="form.address" type="text" class="custom-form" id="exampleInputPassword1" placeholder="Địa chỉ công ty">
               </div>
-            </div>
-            <div class="form-group mt-4">
-              <select v-model="form.customerType" class="custom-form">
-                <option disabled value="">Bạn là khách hàng cá nhân hay doanh nghiệp?</option>
-                <option>Đọt bí xào tỏi</option>
-                <option>Canh bông điên điển</option>
-                <option>Lẩu nấm</option>
-              </select>
-            </div>
-            <div class="form-group mt-5">
-              <input v-model="form.address" type="text" class="custom-form" id="exampleInputPassword1" placeholder="Địa chỉ công ty">
-            </div>
-            <div class="d-flex justify-content-end">
-              <button type="submit" class="btn btn-primary1" style="" @click="submitForm">GỬI THÔNG TIN</button>
-            </div>
-          </form>
+              <div class="d-flex justify-content-end">
+                <button type="submit" class="btn btn-primary1" style="" @click="submitForm">GỬI THÔNG TIN</button>
+              </div>
+            </form>
+          </div>
         </div>
       </div>
     </div>
@@ -85,15 +136,16 @@ export default {
     return {
       selected: '',
       header: info.contact.header,
+      headerMobile: info.contact.headerMobile,
       textHeader: info.contact.textHeader,
       email: info.contact.email,
       phone: info.contact.phone,
       address: info.contact.adress,
       form: {
         name: '',
-        phone: '',
+        phoneNumber: '',
         email: '',
-        business: '',
+        businessName: '',
         customerType: '',
         address: '',
       }
@@ -101,7 +153,8 @@ export default {
   },
   methods: {
     async submitForm() {
-      await GetDataService.sendMail().then(res => {
+      await GetDataService.sendMail(this.form).then(res => {
+        console.log(this.form)
         if (res.data.status === 200) {
           alert('Gửi thông tin thành công');
         } else {
@@ -140,9 +193,19 @@ export default {
   justify-content: center;
   align-items: center;
 }
-.form-container {
-  display: inline-block; /* Để div chỉ chiếm không gian cần thiết */
-  padding: 10px; /* Khoảng cách giữa div và form */
-  border-radius: 10px; /* Độ cong của border (bo góc) */
+.isMobile {
+  display: none;
+}
+
+.isComputer {
+  display: block;
+}
+@media only screen and (max-width: 768px) {
+  .isMobile {
+    display: block;
+  }
+  .isComputer {
+    display: none;
+  }
 }
 </style>

@@ -8,18 +8,18 @@
         'bg-dark3': nightMode,
       }"
     >
-      <div style="height: 180px;">
-        <h5 class="title2 mt-2 ml-3">{{ truncatedTitle }}</h5>
+      <div style="height: 170px;">
         <img
           class="card-img-top"
           :src="`http://localhost:8080/image/${portfolio.cover}`"
           alt="Card image cap"
         />
+        <h5 class="title2 mt-2 ml-3">{{ truncatedTitle }}</h5>
       </div>
-      <div class="card-body">
+      <div class="card-body" style="margin-top: 10px">
         <div>
           <p
-            class=""
+            class="card-content"
             v-html="
               portfolio.description.length > 80
                 ? portfolio.description.substring(0, 80) + '...'
@@ -29,7 +29,14 @@
           </p>
         </div>
         <hr style="width: 90%; margin-top: -10px">
-        <p>Ngày đăng: {{ formatDate(portfolio.date)}}</p>
+        <a style="color: var(--Primary, #3091D9);
+font-family: Inter;
+font-size: 14px;
+font-style: normal;
+font-weight: 400;
+line-height: 20px; /* 142.857% */">Xem chi tiết </a><span><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
+  <path d="M3 8.25006V9.75006H12L7.875 13.8751L8.94 14.9401L14.88 9.00006L8.94 3.06006L7.875 4.12506L12 8.25006H3Z" fill="#3091D9"/>
+</svg></span>
       </div>
     </div>
   </div>
@@ -91,15 +98,21 @@ img {
   /* object-position: 50% 120%;
     max-width: 300px !important; */
 }
-
+.card-content {
+  color: var(--Text-color, #474443);
+  font-family: Inter;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px; /* 142.857% */
+}
 .pcard {
   background-color: rgb(255, 255, 255);
   border-radius: 7px;
   border: none;
   box-shadow: 1px 1px 12px rgb(233, 233, 233);
   transition: all 0.5s;
-  height: 340px;
-  width: 360px;
+  height: 300px;
 }
 
 .pcard:hover {
@@ -139,8 +152,12 @@ img {
 }
 
 .title2 {
-  font-size: 20px;
-  font-weight: 400;
+  color: var(--Text-color, #474443);
+  font-family: Inter;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 20px; /* 125% */
 }
 
 .title3 {

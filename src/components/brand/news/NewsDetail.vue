@@ -3,6 +3,46 @@
       class="py-4 p-st"
   >
 
+    <div class="isMobile">
+      <div class="text-center" style="margin-top: -25px">
+        <div style="position: relative; display: inline-block; width: 100%">
+          <img :src="headerMobile" style="width: 100%;" alt="">
+          <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0,0,0,0.5);"></div>
+        </div>
+        <div
+            class="container custom-container"
+            data-aos="fade"
+            data-aos-once="true"
+            data-aos-duration="1000"
+            style="position: absolute;top: 6%;left: 50%;transform: translate(-50%, -50%);color: #ffffff;height: auto;">
+          <img style="z-index: 20; width: 100%" :src="textHeader" alt="">
+        </div>
+      </div>
+      <div class="container my-5">
+        <p style="color: var(--Primary, #3091D9);
+font-family: Inter;
+font-size: 16px;
+font-style: normal;
+font-weight: 500;
+line-height: 24px; /* 150% */">News</p>
+      </div>
+    </div>
+    <div class="isComputer">
+      <div class="text-center">
+        <div style="position: relative; display: inline-block; width: 100%">
+          <img :src="header" style="width: 100%;" alt="">
+          <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0,0,0,0.5);"></div>
+        </div>
+        <div
+            class="container custom-container"
+            data-aos="fade"
+            data-aos-once="true"
+            data-aos-duration="1000"
+            style="position: absolute;top: 15%;left: 50%;transform: translate(-50%, -50%);color: #ffffff;height: auto;">
+          <img style="z-index: 20" :src="textHeader" alt="">
+        </div>
+      </div>
+    </div>
     <br>
     <div class="container">
       <br />
@@ -28,7 +68,10 @@ export default {
     return {
       all_info: info.portfolio,
       detail: {},
-      id: ''
+      id: '',
+      header: info.news.header,
+      headerMobile: info.news.headerMobile,
+      textHeader: info.news.textHeader,
     };
   },
   created() {
@@ -51,5 +94,19 @@ export default {
   font-size: 30px;
   font-weight: 500;
 }
+.isMobile {
+  display: none;
+}
 
+.isComputer {
+  display: block;
+}
+@media only screen and (max-width: 768px) {
+  .isMobile {
+    display: block;
+  }
+  .isComputer {
+    display: none;
+  }
+}
 </style>
