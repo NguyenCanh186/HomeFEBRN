@@ -12,7 +12,6 @@ line-height: 42px; /* 131.25% */">Tin nổi bật</p>
         <div
             class="col-xl-4 col-bg-4 col-md-6 col-sm-12"
             v-for="(portfolio, idx) in portfolio_info"
-            :key="portfolio.name"
             @click="showModalDetail(portfolio.id)"
         >
           <div class="card-container"> <!-- Thêm container và lớp CSS vào đây -->

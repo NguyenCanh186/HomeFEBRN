@@ -1,6 +1,6 @@
 <template>
-  <div class="components-container">
-    <div>
+  <div class="components-container ">
+    <div class="container">
       <tinymce v-model="content" :height="300" />
     </div>
   </div>

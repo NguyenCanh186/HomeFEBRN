@@ -1,5 +1,5 @@
 <template>
-  <div class="pt-4" style="background-color: #f9f9f9">
+  <div class="pt-4 p-st" style="background-color: #f9f9f9">
     <div class="isMobile container text-center mt-5">
       <img :src="detailService" alt="" style="width: 90%">
       <img style="width: 90%; margin-top: 50px" :src="SMSBRANDNAME" alt="">
@@ -41,7 +41,7 @@
       </div>
       <img :src="frameMobile1440" style="width: 97%" alt="">
     </div>
-    <div class="isMobile" style="position: relative">
+    <div class="isMobile container" style="position: relative">
       <div class="row mt-5" style="position: relative">
         <img :src="rectangleMobile" style="width: 100%" alt="">
         <div class="overlay"></div>
@@ -100,7 +100,7 @@
         </table>
       </div>
     </div>
-    <div class="isComputer">
+    <div class="isComputer container1">
       <div class="mt-3 row">
         <div class="col-5" style="padding-left: 100px;">
           <img :src="detailService" alt="" style=" width: 90%">
@@ -118,7 +118,7 @@
 
       <div class="row" style="margin-top: 120px">
         <div class="col-md-12 col-12 text-center">
-          <img :src="WHATWEDO" alt="">
+          <img :src="WHATWEDO" style="width: 60%" alt="">
           <div style="margin-top: -100px">
             <p style="color: #0A397F;font-family: Inter;font-size: 18px;font-style: normal;font-weight: 400;line-height: 28px; /* 155.556% */">About SMS Brandname</p>
             <p style="color: #474443;text-align: center;font-family: Inter;font-size: 40px;font-style: normal;font-weight: 700;line-height: 52px; /* 130% */">Thành tựu dịch vụ SMS Brandname <br>
@@ -127,12 +127,11 @@
         </div>
       </div>
       <br><br>
-      <div class="image-container mt-4" style="max-height: 600px; overflow-y: auto;">
+      <div class="image-container1 mt-4" style="max-height: 600px; overflow-y: auto;">
         <div
             v-for="image in listAcv"
             :key="image.name"
             class="image-item"
-            style="width: 350px"
         >
           <img :src="image.img" />
           <p class="image-name text-left">{{ image.name }}</p>
@@ -198,27 +197,37 @@ export default {
   display: flex;
   margin: 0 180px; /* Cách lề 2 bên 20px */
 }
-.image-container::-webkit-scrollbar {
+.image-container1 {
+  scrollbar-width: thin;
+  scrollbar-color: #f8f9fa #fffefe;
+  display: flex;
+  margin: 0 300px; /* Cách lề 2 bên 20px */
+}
+.image-container1::-webkit-scrollbar {
   width: 0;
 }
 
-.image-container::-webkit-scrollbar-thumb {
+.image-container1::-webkit-scrollbar-thumb {
   background-color: #f8f9fa;
 }
 
-.image-container::-webkit-scrollbar-thumb:hover {
+.image-container1::-webkit-scrollbar-thumb:hover {
   background-color: #f8f9fa;
 }
 
-.image-container::-webkit-scrollbar-track {
+.image-container1::-webkit-scrollbar-track {
   background-color: #f8f9fa;
 }
 .image-item {
-  width: 400px;
+  width: 800px;
   position: relative;
   margin-left: 100px;
 }
-
+.container1 {
+  width: 100%;
+  padding-right: 0px;
+  padding-left: 0px;
+}
 .image-name {
   color: #0F3567;
   /* Title/H4 */
@@ -226,7 +235,7 @@ export default {
   font-size: 24px;
   font-style: normal;
   font-weight: 700;
-  line-height: 35px; /* 133.333% */
+  line-height: 35px;
 }
 .isMobile {
   display: none;

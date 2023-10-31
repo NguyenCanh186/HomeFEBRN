@@ -22,7 +22,7 @@
             class="card-content"
             v-html="
               portfolio.description.length > 80
-                ? portfolio.description.substring(0, 80) + '...'
+                ? portfolio.description.substring(0, 75) + '...'
                 : portfolio.description
             "
           >

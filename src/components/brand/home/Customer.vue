@@ -13,7 +13,7 @@
         </div>
       </div>
     </div>
-    <div class="container isComputer">
+    <div class="container1 isComputer">
       <div class="col-md-12 col-12 text-center">
         <img :src="partner" alt="">
         <div style="margin-top: -100px">
@@ -22,8 +22,8 @@
         </div>
         <br><br>
         <div>
-          <img :src="frame151" alt=""><br><br><br>
-          <img :src="frame152" alt="">
+          <img style="width: 70%" :src="frame151" alt=""><br><br><br>
+          <img style="width: 70%" :src="frame152" alt="">
         </div>
       </div>
     </div>
@@ -83,7 +83,11 @@ export default {
   justify-content: center; /* Horizontally center the images */
   align-items: center; /* Vertically center the images */
 }
-
+.container1 {
+  width: 100%;
+  padding-right: 0px;
+  padding-left: 0px;
+}
 /* Tuỳ chỉnh kích thước của hình ảnh nếu cần thiết */
 .image-container img {
   width: 180px; /* Ví dụ: đặt kích thước 100px cho hình ảnh */

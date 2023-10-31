@@ -98,12 +98,13 @@ export default {
 <style>
 @import url('https://fonts.googleapis.com/css?family=Inter');
 #app {
-  font-family: "Lobster", sans-serif;
+  font-family: "Inter", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: #2c3e50;
   width: 100%;
 }
+
 
 /*@media screen and (max-width: 580px) {*/
 /*  #app {*/
@@ -115,11 +116,30 @@ export default {
   margin-top: 38px;
   padding-top: 40px;
   position: relative;
-  background: rgba(26, 114, 221, 0.1)
+}
+
+img {
+  max-width: 100% !important;
+}
+
+.pgray {
+  color: #535a5e;
+}
+
+.pblue {
+  color: #759CC9;
+}
+
+.bg-dark2 {
+  background-color: #262c30 !important;
 }
 
 .text-light {
   color: #d3d2d2 !important;
+}
+
+.p-st {
+  transition: all 0.5s !important;
 }
 
 /* To set scrollbar width */
