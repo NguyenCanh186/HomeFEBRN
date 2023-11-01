@@ -8,7 +8,7 @@
       <NewsDetail v-if="isNewsDetailRoute" :nightMode="nightMode" />
       <API v-if="isAPIRoute" :nightMode="nightMode" />
       <Footer :nightMode="nightMode" />
-<!--      <Chat :nightMode="nightMode" />-->
+      <Chat :nightMode="nightMode" />
     </div>
   </div>
 </template>

@@ -20,12 +20,17 @@
         </div>
       </div>
       <br><br>
-      <div class="mt-4" style="overflow-x: auto; margin-left: -250px">
+      <div class="mt-4 container1" style="overflow-x: auto;">
         <div class="image-container">
-          <div v-for="image in listAcv" :key="image.name" class="image-item">
+          <div v-for="image in listAcv" :key="image.name" class="image-item1">
             <img :src="image.img" />
             <p class="image-name text-left">{{ image.name }}</p>
             <p style="color: #696E77; text-align: justify; font-family: Inter; font-size: 16px; font-style: normal; font-weight: 400; line-height: 24px;">{{ image.content }}</p>
+            <br>
+            <div class="image-dot" style="position: absolute; top: 95%; left: 0"></div>
+            <div style="position: absolute; top: 92%;">
+              <hr style="background-color: #0A397F; width: 500px; margin-left: 0">
+            </div>
           </div>
         </div>
       </div>
@@ -115,7 +120,6 @@
           </div>
         </div>
       </div>
-
       <div class="row" style="margin-top: 120px">
         <div class="col-md-12 col-12 text-center">
           <img :src="WHATWEDO" style="width: 60%" alt="">
@@ -127,19 +131,23 @@
         </div>
       </div>
       <br><br>
-      <div class="image-container1 mt-4" style="max-height: 600px; overflow-y: auto;">
-        <div
-            v-for="image in listAcv"
-            :key="image.name"
-            class="image-item"
-        >
-          <img :src="image.img" />
-          <p class="image-name text-left">{{ image.name }}</p>
-          <p style="color: #696E77; text-align: justify; font-family: Inter; font-size: 16px; font-style: normal; font-weight: 400; line-height: 24px;">{{ image.content }}</p>
+      <div class="image-container1 container2">
+        <div class="image-container" style="word-break: break-word;">
+          <div v-for="(image, index) in listAcv" :key="image.name" class="image-item" style="position: relative">
+            <img :src="image.img" />
+            <p class="image-name text-left">{{ image.name }}</p>
+            <p class="image-content text-left">{{ image.content }}</p>
+            <div class="image-dot" style="position: absolute; top: 95%"></div>
+            <div style="position: absolute; top: 92%;">
+              <hr style="background-color: #0A397F; width: 500px; margin-left: 0">
+            </div>
+
+            <br>
+          </div>
         </div>
       </div>
       <br><br>
-      <div class="row">
+      <div class="row ">
         <div class="col-md-12 col-12 text-center">
           <img :src="service" alt="">
           <div style="margin-top: -100px">
@@ -149,8 +157,8 @@
         </div>
       </div>
       <br><br>
-      <div class="image-container mt-4">
-        <img :src="frame" alt="" style="width: 100%">
+      <div class="text-center mt-4">
+        <img :src="frame" alt="" style="width: 90%">
       </div>
       <br><br>
       <div class="mt-5">
@@ -191,42 +199,98 @@ export default {
 </script>
 
 <style scoped>
+.image-dot {
+  width: 10px; /* Độ rộng của chấm */
+  height: 10px; /* Chiều cao của chấm */
+  background-color: #0F3567; /* Màu chấm (xanh) */
+  border-radius: 50%; /* Tạo hình tròn */
+  display: inline-block; /* Hiển thị trên cùng dòng với nội dung */
+  margin-right: 5px; /* Khoảng cách giữa các chấm */
+  word-break: break-word;
+}
+.image-container1 {
+  white-space: normal;
+  overflow-x: auto;
+  width: 100%;
+  height: 100%;
+}
+.image-name {
+  color: #0F3567;
+  font-family: Inter, serif;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 35px;
+}
+.image-content {
+  color: #696E77;
+  text-align: justify;
+  font-family: Inter;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+  word-break: break-word;
+}
 .image-container {
   scrollbar-width: thin;
   scrollbar-color: #f8f9fa #fffefe;
   display: flex;
-  margin: 0 180px; /* Cách lề 2 bên 20px */
+}
+.container1::-webkit-scrollbar {
+  display: none;
+}
+
+.container1::-webkit-scrollbar-thumb {
+  display: none;
+}
+
+.container1::-webkit-scrollbar-thumb:hover {
+  background-color: transparent;
+}
+
+.container1::-webkit-scrollbar-track {
+  background-color: transparent;
 }
 .image-container1 {
   scrollbar-width: thin;
   scrollbar-color: #f8f9fa #fffefe;
   display: flex;
-  margin: 0 300px; /* Cách lề 2 bên 20px */
 }
 .image-container1::-webkit-scrollbar {
-  width: 0;
+  display: none;
 }
 
 .image-container1::-webkit-scrollbar-thumb {
-  background-color: #f8f9fa;
+  display: none;
 }
 
 .image-container1::-webkit-scrollbar-thumb:hover {
-  background-color: #f8f9fa;
+  background-color: transparent;
 }
 
 .image-container1::-webkit-scrollbar-track {
-  background-color: #f8f9fa;
+  background-color: transparent;
 }
 .image-item {
-  width: 800px;
+  width: 300px;
   position: relative;
   margin-left: 100px;
+}
+.image-item1 {
+  width: 300px;
+  position: relative;
+  margin-left: 30px;
 }
 .container1 {
   width: 100%;
   padding-right: 0px;
   padding-left: 0px;
+}
+.container2 {
+  width: 100%;
+  padding-right: 0px;
+  padding-left: 200px;
 }
 .image-name {
   color: #0F3567;

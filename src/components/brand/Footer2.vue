@@ -75,10 +75,18 @@
               <img :src="ft" alt="" style="width: 140%; margin-left: 15px">
             </div>
             <div class="col-8 d-flex mt-2 mb-5">
-              <img :src="ft5" alt="" style="margin-left: 50px; width: 37.624px; height: 37.624px">
-              <img :src="ft4" alt="" style="margin-left: 10px; width: 37.624px; height: 37.624px">
-              <img :src="ft3" alt="" style="margin-left: 10px; width: 37.624px; height: 37.624px">
-              <img :src="ft2" alt="" style="margin-left: 10px; width: 37.624px; height: 37.624px">
+              <a :href="'https://www.facebook.com/sms.brandname.96?fref=ts'">
+                <img :src="ft5" alt="" style="margin-left: 50px; width: 37.624px; height: 37.624px">
+              </a>
+              <a href="">
+                <img :src="ft4" alt="" style="margin-left: 10px; width: 37.624px; height: 37.624px">
+              </a>
+              <a :href="'skype:hotro.smsbrand'">
+                <img :src="ft3" alt="" style="margin-left: 10px; width: 37.624px; height: 37.624px">
+              </a>
+              <a href="">
+                <img :src="ft2" alt="" style="margin-left: 10px; width: 37.624px; height: 37.624px">
+              </a>
             </div>
           </div>
         </div>
@@ -169,14 +177,19 @@ line-height: 32px; /* 133.333% */">Thông tin liên hệ</p>
                 <img :src="ft" alt="">
               </div>
               <div class="col-8">
-                <img :src="ft5" alt="" style="margin-left: 70px">
+                <a :href="'https://www.facebook.com/sms.brandname.96?fref=ts'">
+                  <img :src="ft5" alt="" style="margin-left: 70px">
+                </a>
                 <img :src="ft4" alt="" style="margin-left: 15px">
-                <img :src="ft3" alt="" style="margin-left: 15px">
+                <a :href="'skype:hotro.smsbrand'">
+                  <img :src="ft3" alt="" style="margin-left: 15px">
+                </a>
                 <img :src="ft2" alt="" style="margin-left: 15px">
               </div>
             </div>
             <div class="col-6"></div>
           </div>
+          <br><br>
         </div>
       </div>
     </div>

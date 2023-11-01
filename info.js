@@ -52,6 +52,12 @@ let info = {
     api: require("./src/assets/API/API DOCUMENT.png"),
     step: require("./src/assets/API/step.png"),
   },
+  chat: {
+    back: require("./src/assets/chat/back 1.png"),
+    back1: require("./src/assets/chat/div.prgoress_indicator.png"),
+    back2: require("./src/assets/chat/div.prgoress_indicator (1).png"),
+    back3: require("./src/assets/chat/div.prgoress_indicator (2).png"),
+  },
   news: {
     headerMobile: require("./src/assets/news/Tin tức 1.png"),
     header: require("./src/assets/news/header.png"),

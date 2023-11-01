@@ -75,9 +75,6 @@
           </div>
         </div>
       </div>
-
-
-
       <DetailServive />
       <Customer />
     </div>
