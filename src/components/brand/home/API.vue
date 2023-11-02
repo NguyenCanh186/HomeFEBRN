@@ -38,7 +38,9 @@
         </ul>
         <br>
         <div class=" text-center mb-5">
-          <img style="width: 90%" :src="button" alt="">
+          <a :href="'https://drive.google.com/uc?export=download&id=1M6Rn3GRDPLaGF5oj3tYPD3i0gmVMrZHT'">
+            <img style="width: 90%" :src="button" alt="">
+          </a>
         </div>
       </div>
     </div>
@@ -77,10 +79,21 @@
             <p style="color: #474443;font-family: Inter,serif;font-size: 40px;font-style: normal;font-weight: 600;line-height: normal;">
               Hướng dẫn kết nối API
             </p>
-            <img :src="step" alt="" style="margin-top: 20px">
-            <div class="mt-5">
-              <img :src="button" alt="">
+            <br><br>
+            <div class="text-left" style="margin-left: 150px">
+              <p style="color: #474443;font-family: Inter;font-size: 24px;font-style: normal;font-weight: 700;line-height: 32px; text-align: left">Các bước kết nối</p>
+              <ul>
+                <li style="font-size: 22px">Bước 1: Thực hiện khai báo mở mã với nhà mạng (Viettel, Vinaphone, Mobifone)</li>
+                <li style="font-size: 22px">Bước 2: Tiến hành xây dựng, kết nối API</li>
+                <li style="font-size: 22px">Bước 3: Nghiệm thu và triển khai kinh doanh dịch vụ.</li>
+              </ul>
             </div>
+            <div class="mt-5">
+              <a :href="'https://drive.google.com/uc?export=download&id=1M6Rn3GRDPLaGF5oj3tYPD3i0gmVMrZHT'">
+                <img :src="button" alt="">
+              </a>
+            </div>
+
           </div>
           <div class="col-6">
             <img style="width: 100%" :src="p2" alt="">
