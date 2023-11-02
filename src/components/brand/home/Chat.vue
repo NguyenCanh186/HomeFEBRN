@@ -51,6 +51,7 @@ export default {
 @media only screen and (max-width: 768px) {
   .chat-bubble {
     right: -30px !important;
+    bottom: 500px !important;
   }
 }
 
