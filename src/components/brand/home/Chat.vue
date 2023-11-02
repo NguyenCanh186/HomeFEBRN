@@ -10,7 +10,9 @@
         <ul>
           <li><a href="#"><img :src="back1" alt=""></a></li>
           <li><a href="#"><img :src="back2" alt=""></a></li>
-          <li><a href="#"><img :src="back3" alt=""></a></li>
+          <li>
+            <a :href="'tel:(08) 39990998'" class="contact-info"><img :src="back3" alt=""></a>
+          </li>
         </ul>
       </details>
     </div>
